@@ -1,0 +1,14 @@
+def alocar_area():
+    fumante = input("Alguma pessoa do grupo é fumante? (sim/não): ").strip().lower()
+    animais = input("Alguma pessoa do grupo possui animais de estimação? (sim/não): ").strip().lower()
+    num_pessoas = int(input("Quantas pessoas estão no grupo?: ").strip())
+
+    if fumante == "sim" or animais == "sim":
+        return "Área externa"
+    elif num_pessoas >= 5:
+        return "1º andar"
+    else:
+        return "Térreo"
+
+area = alocar_area()
+print(f"A área apropriada para o grupo é: {area}")
